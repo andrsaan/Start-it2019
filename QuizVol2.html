@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml%22%3E">
+
+    <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+    img {
+    height:200px;
+    }
+    
+    </style>
+</head>
+
+<body>
+    <h1>Trykk på apen!</h1>
+    <div id="feil"></div>
+    
+    <img src="https://extra-leker.global.ssl.fastly.net/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/6/4/64909_1.jpg" onclick="visFeil()"/>
+    <img src="https://images-na.ssl-images-amazon.com/images/I/51vLJNy7BzL.jpg" onclick="visFeil()"/>
+    <img src="https://cdn.vox-cdn.com/thumbor/ThgiWfL6zEnyu1pnSrGpRL5y8xw=/0x0:666x444/920x613/filters:focal(273x193:379x299):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/59384673/Macaca_nigra_self-portrait__rotated_and_cropped_.0.jpg" onclick="visRiktig()"/>
+
+<script>
+    var status = 0;
+    function visFeil () {
+    if ( status == 0 )
+    document.getElementById('feil').innerHTML = 'feil'
+    }
+    function visRiktig () {
+    document.getElementById('feil').innerHTML = 'riktig'
+    }
+
+
+</script>
+
+
+</body>
+
+
+
+</html>

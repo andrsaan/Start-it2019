@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        div.page {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 25fr 100fr 25fr;
+            grid-template-areas: 'menu header' 'menu mainContent' 'menu footer';
+        }
+        
+        div.header {
+            background-color: chartreuse;
+            grid-area: header;
+            font-size:200%;
+            text-align: center;
+        }
+            
+        div.menu {
+            background-color: aqua;
+            grid-area: menu;
+        
+        }
+        div.mainContent {
+            background-color: brown;
+            grid-area: mainContent;
+            font-size: 500%;
+            text-align: center;
+            background-repeat: no-repeat;
+            background-size:600px;
+            background-position: center;
+            color: rgb(0, 0, 0);
+        }
+        }
+       
+        div.footer {
+            background-color: gold;
+            grid-area: footer;
+
+        }   
+        
+        @media only screen and (max-width: 400px) {
+        
+        }    
+    </style>
+</head>
+<body>
+<div class="page">
+<div class="header">Header</div>
+<div class="menu">menu</div>
+<div style="background-image:url('kebab.jpg')" class="mainContent">MainContent</div>
+<div class="footer">Footer</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <style>
+      img {
+    height:200px;
+    }
+   </style>                                                         
+
+
+
+     <meta charset="utf-8"  />
+     <title></title>   
+ </head>
+<body>
+<h2> Hvor ligger Mount Everest? </h2>
+<div id='AndreasFavorittKnapp2'>
+<br><button onclick="visRiktig()" style="padding: 20px">Himalaya</button>
+<br><button onclick="visFeil()" style="padding: 20px">Rjukan</button>
+<br><button onclick="visFeil()"style= "padding: 20px">USA</button>
+<div id='AndreasFavorittKnapp'>Trykk på en av knappene</div>
+<div id='nextButtonDiv'>
+</div>
+
+<script>
+    var status = 0; 
+
+
+    function visRiktig() {
+        document.getElementById('AndreasFavorittKnapp').innerHTML = 'Riktig!';
+        document.getElementById('nextButtonDiv').innerHTML = '<button onclick="showQuestion2()">neste spørsmål</button>';
+        status = 1;
+    }
+    function visFeil() {
+        if (status == 0) {
+        document.getElementById('AndreasFavorittKnapp').innerHTML = 'Feil!';
+        }
+    }
+    function visFeil() {
+        if (status == 0) {
+        document.getElementById('AndreasFavorittKnapp').innerHTML = 'Feil!';
+        }
+    }
+
+    function showQuestion2() {
+        document.getElementById('AndreasFavorittKnapp2').innerHTML = 
+    
+    `<h1>Trykk på apen!</h1>
+    <div id="feil"></div>
+    
+    <img src="https://extra-leker.global.ssl.fastly.net/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/6/4/64909_1.jpg" onclick="visFeeil()"/>
+    <img src="https://images-na.ssl-images-amazon.com/images/I/51vLJNy7BzL.jpg" onclick="visFeeil()"/>
+    <img src="https://cdn.vox-cdn.com/thumbor/ThgiWfL6zEnyu1pnSrGpRL5y8xw=/0x0:666x444/920x613/filters:focal(273x193:379x299):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/59384673/Macaca_nigra_self-portrait__rotated_and_cropped_.0.jpg" onclick="visRiiktig()"/>`;
+    }
+
+    var status = 0;
+    function visFeeil () {
+    if ( status == 0 )
+    document.getElementById('feil').innerHTML = 'feil'
+    }
+    function visRiiktig () {
+    document.getElementById('feil').innerHTML = 'riktig'
+    }
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

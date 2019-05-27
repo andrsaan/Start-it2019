@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <p>Ferdighet 7a - Sette variabel til tilfeldig tall</p>
+    <div id="resultat"></div>
+    <div id="box" style="background-color:green">hallaisen</div>
+
+
+
+
+    <script>
+        var boxDiv = document.getElementById('box');
+        calculate();
+        function calculate() {
+            var tallA = 15 + Math.floor(Math.random() * 500);
+            var tallB = 25 + Math.floor(Math.random() * 500);
+            var tallC = Math.floor(Math.random() * 10);
+            setInterval(calculate, 100);
+
+            boxDiv.style.width = tallA + 'px';
+            boxDiv.style.height = tallB + 'px';
+            boxDiv.style.border = tallC + 'px solid black';
+
+            function random_bg_color() {
+                var x = Math.floor(Math.random() * 256);
+                var y = Math.floor(Math.random() * 256);
+                var z = Math.floor(Math.random() * 256);
+                var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+                console.log(bgColor);
+                setInterval(random_bg_color, 10);
+                document.body.style.background = bgColor;
+            }
+
+            random_bg_color();
+
+
+
+
+
+        }
+    </script>
+</body>
+
+</html>
